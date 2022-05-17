@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bake with Cups & Spoons</title>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Taviraj" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="background">
+
+    <div class="topbar">
+      <!--Hamburger Menu / https://codepen.io/erikterwan/pen/EVzeRP-->
+      <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+          <input type="checkbox" />
+
+          <!-- Some spans to act as a hamburger. -->
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+            <a href="#">
+              <li>Home</li>
+            </a>
+            <a href="#">
+              <li>Ingredient Converter</li>
+            </a>
+            <a href="#">
+              <li>Recipe Creator</li>
+            </a>
+            <a href="#">
+              <li>Cooking Timer</li>
+            </a>
+            <a href="#">
+              <li>Inspirations</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <header>
+      <img src="images/cups+spoons.png" alt="measuring cups & spoons">
+      <h1>Bake with<br>Cups & Spoons</h1>
+    </header>
+
+    <section id="intro">
+      <p>When I first started to learn baking, I didn’t have a lot of “tools”. I didn’t have kitchen scale or mixer. I
+        only had a set of measuring cups & spoons bought as a basic starter kit. I often searched on the internet to
+        convert ingredients from various units into cups & spoons. <br><br>
+        If you are like me who love baking (and cooking) but don’t want to get all the “bells & whistles” to prepare
+        your ingredients, you can simply measure everything in cups & spoons using our converter. You can also get
+        inspiration from the delicious images on Instagram shared by fellow food lovers and build your own
+        recipes.<br><br>
+        Are you ready? Let's start!</p>
+    </section>
+
+    <section id="buttons">
+      <button class="button"><a href="#">Ingredient Converter</a></button>
+      <button class="button"><a href="#">Recipe Creator</a></button>
+      <button class="button"><a href="#">Cooking Timer</a></button>
+      <button class="button"><a href="#">Inspirations</a></button>
+    </section>
+
+    
+    <footer>      
+      <div class="bottombar1"></div>
+      <div class="bottombar2"></div>      
+    </footer>
+
+
+    
+  </div>
+</body>
+
+</html>
