@@ -16,6 +16,7 @@
   --color-bg-medium: #EDEDED;
   --color-font-title: #BB7138;
   --color-font-body: #2B394A;
+  --color-font-span: #734F96;
   --color-button: #A5AA93;
   --color-menu-toggle: #556B2F;
   --color-menu-hover: #740F35;
@@ -86,16 +87,20 @@ footer {
   background-size: 100%;
 }
 
+.background5 {
+  background-color: var(--color-bg-light);
+}
+
 .blank1 {
-  height: 400px;
+  height: 200px;
 }
 
 .blank2 {
-  height: 350px;
+  height: 150px;
 }
 
 .blank3 {
-  height: 150px;
+  height: 550px;
 }
 
 header {
@@ -104,8 +109,8 @@ header {
 
 header h1 {
   color: var(--color-font-title);
-  font-size: 2.5em;
-  font-weight: 600;
+  font-size: 2em;
+  font-weight: 400;
   letter-spacing: 2px;
   line-height: 1.2em;
   padding-top: 10px;
@@ -113,12 +118,13 @@ header h1 {
 
 #logo1 {
   height: 120px;
-  padding: 10px 35px;
+  padding: 10px 20px;
 }
 
-header h2 {
+header h2, header a {
+  font-family: var(--font-family-title);
   color: var(--color-font-title);
-  font-size: 1.9em;
+  font-size: 1.3em;
   font-weight: 600;
   letter-spacing: 1.25px;
   line-height: 1.2em;
@@ -126,8 +132,10 @@ header h2 {
 }
 
 span {
-  font-size: 0.6em;
-  color: var(--color-menu-hover);
+  font-family: var(--font-family-body);
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--color-font-span);
   font-style: oblique;
 }
 
@@ -163,20 +171,24 @@ select {
   border-color: var(--color-font-body);
 }
 
-#main-title {
-  font-size: 1.3em;
+h3, #main-title {
+  font-size: 1.1em;
   font-weight: 800;
   letter-spacing: 1.5px;
   padding: 10px 10px;
 }
 
-pre {
-  font-size: 1.1em;
+pre, #cooking {
+  font-size: 1em;
   font-style: oblique;
   font-weight: 800;
   letter-spacing: 2px;
   line-height: 0.8em;
   padding: 10px 10px;
+}
+
+#recipe, #list, #items_table  {
+  padding: 10px;
 }
 
 .button {
@@ -236,18 +248,13 @@ textarea {
   border-radius: 5px;
 }
 
+/*
 input[type="button"]:hover {
   font-weight: 600;
   transform: scale(1.2);
-}
+} */
 
-#cooking {
-  padding: 6px;
-}
 
-#items_table {
-  padding: 6px;
-}
 
 /* Hamburger Menu source - https://codepen.io/erikterwan/pen/EVzeRP */
 
@@ -265,12 +272,12 @@ input[type="button"]:hover {
   text-decoration: none;
   color: var(--color-menu-toggle);
   transition: color 0.3s ease;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 #menuToggle a:hover {
   color: var(--color-menu-hover);
-  font-size: 1.25em;
+  font-size: 1.2em;
   font-style: italic;
 }
 
@@ -345,7 +352,7 @@ input[type="button"]:hover {
 
 #menu li {
   padding: 5px;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 #menuToggle input:checked~ul {
@@ -460,6 +467,6 @@ body{
 }
 
 img {
-  height: 200px;
+  height: 150px;
   padding: 5px;
 }
