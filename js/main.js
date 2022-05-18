@@ -197,7 +197,7 @@ $.getJSON({
   }
 })
 
-const processData = function(data) {
+const processData = function (data) {
   console.log(data);
   $("#photos").html("");
   for (var i = 0; i < data.items.length; i++) {
@@ -207,4 +207,18 @@ const processData = function(data) {
     $("#photos").append($img);
     $img.wrap('<a href="' + $anchor + '">');
   }
+}
+
+/* play music */
+var aud = document.getElementById("playmusic").children[0];
+var isPlaying = false;
+aud.pause();
+
+function playPause() {
+  if (isPlaying) {
+    aud.pause();
+  } else {
+    aud.play();
+  }
+  isPlaying = !isPlaying;
 }
