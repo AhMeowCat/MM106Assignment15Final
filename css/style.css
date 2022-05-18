@@ -88,7 +88,8 @@ footer {
 }
 
 .background5 {
-  background-color: var(--color-bg-light);
+  background: var(--color-bg-light) url("../images/catscafe-screened.jpg") repeat top center;
+  background-size: 100%;
 }
 
 .blank1 {
@@ -222,6 +223,7 @@ pre, #cooking, label {
   border-radius: 10px;
   margin: 20px auto;
   color: white;
+  -webkit-appearance: none;
 }
 
 .button a {
@@ -456,6 +458,7 @@ pre, #cooking, label {
   letter-spacing: 2px;
   font-weight: 600;
   margin: 30px -50px;
+  -webkit-appearance: none;
 }
 
 .tbl{display:table;width:100%}
