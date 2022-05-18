@@ -8,22 +8,24 @@
 
 :root {
   --font-family-title: 'Taviraj', serif;
-  /*'Puritan', sans-serif;*/
-  --font-family-body: 'Lato', sans-serif;
+  --font-family-body: 'Lato', sans-serif; /*'Puritan', sans-serif; */
   --color-light: #F0E5D3;
   --color-medium: #F3D0B5;
-  --color-bg-light: #faf7ee;
+  --color-bg-light: #FAF7EE;
   --color-bg-medium: #EDEDED;
   --color-font-title: #BB7138;
   --color-font-body: #2B394A;
   --color-font-span: #734F96;
   --color-button: #A5AA93;
   --color-menu-toggle: #556B2F;
-  --color-menu-hover: #740F35;
+  --color-menu-hover: #ec366b; /*#740F35*/
+  --color-border: #BAB86C;
+  --color-timer: #967BB6;
 }
 
 body {
   background-color: var(--color-bg-medium);
+  color: var(--color-font-body);
 }
 
 h3,
@@ -41,28 +43,26 @@ label {
 h1,
 h2 {
   font-family: var(--font-family-title);
-  font-weight: 400;
 }
 
 .topbar {
-  width: 350px;
+  width: 70%;
   height: 40px;
   background-color: var(--color-light);
 }
 
 footer {
   display: flex;
-  padding-top: 10px;
 }
 
 .bottombar1 {
-  width: 180px;
+  width: 30%;
   height: 40px;
   background-color: var(--color-bg-light);
 }
 
 .bottombar2 {
-  width: 100%;
+  width: 70%;
   height: 40px;
   background-color: var(--color-medium);
 }
@@ -92,61 +92,61 @@ footer {
 }
 
 .blank1 {
-  height: 300px;
+  height: 200px;
 }
 
 .blank2 {
   height: 80px;
 }
 
-.blank3 {
-  height: 70px;
-}
-
 header {
   display: flex;
-  width: 100%;
+  justify-content: space-between;
 }
 
 header h1 {
   color: var(--color-font-title);
   font-size: 2em;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 2px;
   line-height: 1.2em;
-  padding-top: 10px;
+  padding: 10px 5px;
 }
 
 #logo1 {
-  height: 120px;
-  padding: 10px 20px;
+  height: 100px;
+  padding: 10px;
 }
 
 header h2, header a {
   font-family: var(--font-family-title);
   color: var(--color-font-title);
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 600;
   letter-spacing: 1.25px;
   line-height: 1.2em;
-  padding: 10px;
+  padding: 15px 20px;
 }
 
-span {
+span {  /* active page title */
   font-family: var(--font-family-body);
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 600;
   color: var(--color-font-span);
   font-style: oblique;
 }
 
+span.count {
+  font-style: normal;
+}
+
 #logo2 {
-  height: 90px;
-  padding: 5px 5px;
+  height: 80px;
+  padding: 5px 2px;
 }
 
 #intro {
-  padding: 20px 40px 80px 40px;
+  padding: 20px 30px 80px 30px;
   font-size: 1.05em;
   font-weight: 600;
   line-height: 1.35em;
@@ -162,25 +162,40 @@ span {
   padding: 10px 10px 40px 10px;
 }
 
-#input,
-select {
-  width: 100px;
-  margin-right: 5px;
+input,
+select,
+textarea {
+  width: 120px;
   text-align: center;
+  border: 1px solid var(--color-border);
+  margin: 10px 10px 0 0;
+  padding: 10px 10px 0 0;
   border-radius: 5px;
-  border-style: none;
-  border-color: var(--color-font-body);
+}
+
+#input {
+  width: 70px;
+}
+
+td,
+th {
+  padding: 10px 10px 0 0;
+  font-weight: 400;
 }
 
 h3, #main-title {
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 800;
   letter-spacing: 1.5px;
   padding: 10px 10px;
 }
 
-pre, #cooking {
-  font-size: 1em;
+#timer h3, #inspirations h3 {
+  padding: 20px;
+}
+
+pre, #cooking, label {
+  font-size: 0.8em;
   font-style: oblique;
   font-weight: 800;
   letter-spacing: 2px;
@@ -213,6 +228,10 @@ pre, #cooking {
   color: white;
 }
 
+.button:last-child {  /*give more room below last buttons */
+ margin-bottom: 40px;
+}
+
 .small {
   display: inline-block;
   width: 100px;
@@ -220,42 +239,19 @@ pre, #cooking {
 }
 
 .box1 {
-  padding-left: 30px;
+  padding-right: 5px;
 }
 
 .box1 p {
   font-size: 1em;
-  font-weight: 800;
+  font-weight: 400;
+  text-align: end;
 }
 
 .box2 {
   /*hide the other units convert only cups & spoons */
   display: none;
 }
-
-/* Recipe Creator */
-td,
-th {
-  padding: 10px;
-}
-
-input,
-select,
-textarea {
-  width: auto;
-  border: 1px solid #BAB86C;
-  margin: 8px;
-  padding: 8px;
-  border-radius: 5px;
-}
-
-/*
-input[type="button"]:hover {
-  font-weight: 600;
-  transform: scale(1.2);
-} */
-
-
 
 /* Hamburger Menu source - https://codepen.io/erikterwan/pen/EVzeRP */
 
@@ -280,6 +276,7 @@ input[type="button"]:hover {
   color: var(--color-menu-hover);
   font-size: 1.2em;
   font-style: italic;
+  font-weight: 400;
 }
 
 #menuToggle input {
@@ -361,12 +358,7 @@ input[type="button"]:hover {
 }
 
 /* Cooking Timer source - https://codepen.io/khadkamhn/pen/xRbyxR */
-body{
-	margin:0;
-	color:#444;
-	background:#ecf0f1;
-	font:300 18px/18px Roboto, sans-serif;
-}
+
 *,:after,:before{box-sizing:border-box}
 .pull-left{float:left}
 .pull-right{float:right}
@@ -382,7 +374,7 @@ body{
 	margin:auto;
 	width:240px;
 	height:240px;
-	margin-top:100px;
+	margin-top:50px;
 	position:relative;
 	border-radius:50px;
 	background-color:#fff;
@@ -407,9 +399,8 @@ body{
 	margin-top:-60px;
 	margin-left:-60px;
 	border-radius:inherit;
-	background-color:#ec366b;
+	background-color:var(--color-timer);
 	box-shadow:0 0 15px rgba(0,0,0,.15), 0 0 3px rgba(255,255,255,.75) inset;
-	/*border:1px solid rgba(255,255,255,.1);*/
 }
 .count{
 	width:100%;
@@ -437,37 +428,45 @@ body{
 	margin:auto;
 	max-width:200px;
 }
+
 .action .input{
 	margin-top:30px;
 	position:relative;
 }
+
 .action .input-num{
-	width:100%;
+	width:200px;
 	border:none;
 	padding:12px;
 	border-radius:60px;
+  margin: 30px -30px;
+  text-align: center;
 }
+
 .action .input-btn{
-	top:0;
+  top:0;
 	right:0;
 	color:#fff;
-	border:none;
 	border:none;
 	padding:12px;
 	position:absolute;
 	border-radius:60px;
-	background-color:#ec366b;
+	background-color:var(--color-timer);
 	text-transform:uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin: 30px -50px;
 }
+
 .tbl{display:table;width:100%}
 .tbl .col{display:table-cell}
 
 /* Flickr Gallery */
 #photos {
-  padding: 10px;
+  padding: 15px;
 }
 
 img {
-  height: 150px;
+  height: 100px;
   padding: 5px;
 }
