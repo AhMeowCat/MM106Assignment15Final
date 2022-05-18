@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bake with Cups & Spoons: Home</title>
+  <title>Bake with Cups & Spoons: Inspirations</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Taviraj" rel="stylesheet">
 </head>
 
-<body>
+<body onload="checkBrowser()">
 
   <div class="topbar">
-    <!--Hamburger Menu / https://codepen.io/erikterwan/pen/EVzeRP-->
+    <!--Hamburger Menu source - https://codepen.io/erikterwan/pen/EVzeRP-->
     <nav role="navigation">
       <div id="menuToggle">
         <!--
@@ -49,37 +49,40 @@
   </div>
 
   <header>
-    <img id="logo1" src="images/cups+spoons.png" alt="measuring cups & spoons">
-    <h1>Bake with<br>Cups & Spoons</h1>
+    <h2>Bake with Cups & Spoons<br><span>>> Inspirations<span></h2>
+    <img id="logo2" src="images/cups+spoons.png" alt="measuring cups & spoons">
   </header>
 
-  <div class="background1">
+  <div class="background4">
 
-    <section id="intro">
-      <p>When I first started to learn baking, I didn’t have a lot of “tools”. I only had a basic set of measuring cups
-        & spoons. That is it and that's all you need!
-        <br><br>
-        If you are like me who love baking (and cooking) but don’t want to get all the “bells & whistles”, you can
-        simply measure everything in cups & spoons with the help of our convertor. You can also get inspirations from
-        the delicious images shared by fellow food lovers and build your own recipes.
-        <br><br>
-        Are you ready? Let's start!</p>
+    <section id="inspirations">
+
+      <div class="wrapper">
+        <header>
+          <h3 id="main-title">Get Inspirations</h3>
+          <select id="dropDown">
+            <option>Cakes</option>
+            <option>Cookie</option>
+            <option>Breads</option>
+          </select>
+        </header>
+    
+        <main>
+          <div id="photos" class="row"></div>
+        </main>
+
+      <div class="blank1"></div>
     </section>
-
-    <section id="buttons">
-      <button class="button"><a href="#">Ingredient Converter</a></button>
-      <button class="button"><a href="#">Recipe Creator</a></button>
-      <button class="button"><a href="#">Cooking Timer</a></button>
-      <button class="button"><a href="#">Inspirations</a></button>
-    </section>
-
 
     <footer>
       <div class="bottombar1"></div>
       <div class="bottombar2"></div>
     </footer>
-
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 
 </html>

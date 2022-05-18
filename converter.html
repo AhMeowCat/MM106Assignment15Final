@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bake with Cups & Spoons: Ingredient Converter</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Taviraj" rel="stylesheet">
+</head>
+
+<body onload="checkBrowser()">
+
+  <div class="topbar">
+    <!--Hamburger Menu source - https://codepen.io/erikterwan/pen/EVzeRP-->
+    <nav role="navigation">
+      <div id="menuToggle">
+        <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+        <input type="checkbox" />
+
+        <!-- Some spans to act as a hamburger. -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="#">
+            <li>Home</li>
+          </a>
+          <a href="#">
+            <li>Ingredient Converter</li>
+          </a>
+          <a href="#">
+            <li>Recipe Creator</li>
+          </a>
+          <a href="#">
+            <li>Cooking Timer</li>
+          </a>
+          <a href="#">
+            <li>Inspirations</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <header>
+    <h2>Bake with Cups & Spoons<br><span>>> Ingredient Converter</span></h2>
+    <img id="logo2" src="images/cups+spoons.png" alt="measuring cups & spoons">
+  </header>
+
+  <div class="background2">
+
+    <section id="convert">
+
+      <!-- source - https://codepen.io/Juamee/pen/ExKzoGK -->
+      <div class="big-box">
+        <h3 id="main-title">Convert your Ingredients</h3>
+        <p id="title">
+          <pre>Ingredient Portion<br><br>From                                 To</pre>
+        </p>
+
+        <div class="convert">
+          <input type="number" placeholder="Quantity" id="input">
+          <br>
+
+          <select id="dropdownlist">
+            <option value="select"> Select a unit </option>
+            <option value="millilitre"> Millilitre </option>
+            <option value="fluid-ounce"> Fluid ounce </option>
+            <option value="cup"> Cup </option>
+            <option value="liter"> Liter </option>
+            <option value="pint"> Pint </option>
+          </select>
+
+          <div class="box1">
+            <div id="cup-output"> </div>
+            <div id="Tbsp-output"> </div>
+            <div id="tsp-output"> </div>
+          </div>
+
+          <div class="box2">
+            <div id="oz-output"> </div>
+            <div id="mL-output"> </div>
+            <div id="liter-output"> </div>
+            <div id="pint-output"> </div>
+          </div>
+
+        </div>
+
+        <button class="button small" onclick="aghuy()">Convert</button>
+
+        <div class="blank1"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="bottombar1"></div>
+      <div class="bottombar2"></div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

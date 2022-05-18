@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bake with Cups & Spoons: Recipe Creator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Taviraj" rel="stylesheet">
+</head>
+
+<body onload="checkBrowser()">
+
+  <div class="topbar">
+    <!--Hamburger Menu source - https://codepen.io/erikterwan/pen/EVzeRP-->
+    <nav role="navigation">
+      <div id="menuToggle">
+        <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+        <input type="checkbox" />
+
+        <!-- Some spans to act as a hamburger. -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="#">
+            <li>Home</li>
+          </a>
+          <a href="#">
+            <li>Ingredient Converter</li>
+          </a>
+          <a href="#">
+            <li>Recipe Creator</li>
+          </a>
+          <a href="#">
+            <li>Cooking Timer</li>
+          </a>
+          <a href="#">
+            <li>Inspirations</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <header>
+    <h2>Bake with Cups & Spoons<br><span>>> Recipe Creator</span></h2>
+    <img id="logo2" src="images/cups+spoons.png" alt="measuring cups & spoons">
+  </header>
+
+  <div class="background3">
+
+    <section id="recipe">     
+     
+        <form name="RecipeList">
+          <h3>Create your own Recipe</h3>
+          <div id="cooking">
+            <p>Enter Ingredient Items and Portions</p>
+            <table>
+              <tr>
+                <td>Ingredient <input type="text" name="name"></td>
+                <td>Portion <input type="text" name="data"></td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="button" class="button small" value="Save" onclick="saveItem()">
+                  <input type="button" class="button small" value="Modify" onclick="modifyItem()">
+                  <input type="button" class="button small" value="Delete" onclick="deleteItem()">
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div id="items_table">
+            <h1>My Recipe</h1>
+            <table id="list">
+              <p>
+                <label><input type="button" class="button small"  value="Clear" onclick="clearAll()">Remove all items</label>
+              </p>
+            </table>
+          </div>
+        </form>
+
+        <div class="blank2"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="bottombar1"></div>
+      <div class="bottombar2"></div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
