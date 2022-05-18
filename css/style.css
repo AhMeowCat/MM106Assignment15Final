@@ -67,6 +67,10 @@ footer {
   background-color: var(--color-medium);
 }
 
+.music {
+  display: none;
+}
+
 .background1 {
   background: var(--color-bg-light) url("../images/catskitchen-screened.jpg") no-repeat center center;
   background-size: 100%;
@@ -103,6 +107,10 @@ footer {
 header {
   display: flex;
   justify-content: space-between;
+}
+
+#home {
+  justify-content: start;
 }
 
 header h1 {
