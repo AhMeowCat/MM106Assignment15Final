@@ -7,45 +7,29 @@ function aghuy() {
   if (x == "" || y == "select") {
     alert("Type a number and select a unit to convert! ");
   } else if (y == "millilitre") {
-    document.getElementById("mL-output").innerHTML = "<p>" + (x * 1) + "&nbsp&nbspml</p>";
-    document.getElementById("oz-output").innerHTML = "<p>" + (x * 0.0338) + "&nbsp&nbspfl. oz</p>";
-    document.getElementById("cup-output").innerHTML = "<p>" + Math.round((x * 0.0042) * 100) / 100 + "&nbsp&nbspcups</p>";
-    document.getElementById("Tbsp-output").innerHTML = "<p>" + Math.round((x * 0.0042 / 16) * 100) / 100 + "&nbsp&nbspTbsp</p>";
-    document.getElementById("tsp-output").innerHTML = "<p>" + Math.round((x * 0.0042 / 48) * 100) / 100 + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
-    document.getElementById("liter-output").innerHTML = "<p>" + (x * 0.001) + "&nbsp&nbspL</p>";
-    document.getElementById("pint-output").innerHTML = "<p>" + (x * 0.0021) + "  pt</p>";
+    document.getElementById("cup-output").innerHTML = "<p>" + (x * 0.0042).toFixed(1) + "&nbsp&nbspcups</p>";
+    document.getElementById("Tbsp-output").innerHTML = "<p>" + (x * 0.0042 * 16).toFixed(1) + "&nbspTbsp</p>";
+    document.getElementById("tsp-output").innerHTML = "<p>" + (x * 0.0042 * 48).toFixed(1) + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
+
   } else if (y == "fluid-ounce") {
-    document.getElementById("mL-output").innerHTML = "<p>" + (x * 29.57) + "&nbsp&nbspml</p>";
-    document.getElementById("oz-output").innerHTML = "<p>" + (x * 1) + "&nbsp&nbspfl. oz</p>";
-    document.getElementById("cup-output").innerHTML = "<p>" + Math.round((x * 0.125) * 100) / 100 + "&nbsp&nbspcups</p>";
-    document.getElementById("Tbsp-output").innerHTML = "<p>" + Math.round((x * 0.125 / 16) * 100) / 100 + "&nbsp&nbspTbsp</p>";
-    document.getElementById("tsp-output").innerHTML = "<p>" + Math.round((x * 0.125 / 48) * 100) / 100 + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
-    document.getElementById("liter-output").innerHTML = "<p>" + (x * 0.0296) + "&nbsp&nbspL</p>";
-    document.getElementById("pint-output").innerHTML = "<p>" + (x * 0.0625) + "  pt</p>";
+    document.getElementById("cup-output").innerHTML = "<p>" + (x * 0.125).toFixed(1) + "&nbsp&nbspcups</p>";
+    document.getElementById("Tbsp-output").innerHTML = "<p>" + (x * 0.125 * 16).toFixed(1) + "&nbspTbsp</p>";
+    document.getElementById("tsp-output").innerHTML = "<p>" + (x * 0.125 * 48).toFixed(1) + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
+
   } else if (y == "cup") {
-    document.getElementById("mL-output").innerHTML = "<p>" + (x * 250) + "&nbsp&nbspml</p>";
-    document.getElementById("oz-output").innerHTML = "<p>" + (x * 8) + "&nbsp&nbspfl. oz</p>";
-    document.getElementById("cup-output").innerHTML = "<p>" + (x * 1) + "&nbsp&nbspcups</p>";
-    document.getElementById("Tbsp-output").innerHTML = "<p>" + (x * 1 / 16) + "&nbsp&nbspTbsp</p>";
-    document.getElementById("tsp-output").innerHTML = "<p>" + Math.round((x * 1 / 48) * 100) / 100 + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
-    document.getElementById("liter-output").innerHTML = "<p>" + Math.round((x * 0.237) * 100) / 100 + "&nbsp&nbspL</p>";
-    document.getElementById("pint-output").innerHTML = "<p>" + (x * 0.5) + "  pt</p>";
+    document.getElementById("cup-output").innerHTML = "<p>" + (x * 1).toFixed(1) + "&nbsp&nbspcups</p>";
+    document.getElementById("Tbsp-output").innerHTML = "<p>" + (x * 1 * 16).toFixed(1) + "&nbspTbsp</p>";
+    document.getElementById("tsp-output").innerHTML = "<p>" + (x * 1 * 48).toFixed(1) + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
+
   } else if (y == "liter") {
-    document.getElementById("mL-output").innerHTML = "<p>" + (x * 1000) + "&nbsp&nbspml</p>";
-    document.getElementById("oz-output").innerHTML = "<p>" + (x * 33.81) + "&nbsp&nbspfl. oz</p>";
-    document.getElementById("cup-output").innerHTML = "<p>" + Math.round((x * 4.227) * 100) / 100 + "&nbsp&nbspcups</p>";
-    document.getElementById("Tbsp-output").innerHTML = "<p>" + Math.round((x * 4.227 / 16) * 100) / 100 + "&nbsp&nbspTbsp</p>";
-    document.getElementById("tsp-output").innerHTML = "<p>" + Math.round((x * 4.227 / 48) * 100) / 100 + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
-    document.getElementById("liter-output").innerHTML = "<p>" + (x * 1) + "&nbsp&nbspL</p>";
-    document.getElementById("pint-output").innerHTML = "<p>" + (x * 2.113) + "  pt</p>";
+    document.getElementById("cup-output").innerHTML = "<p>" + (x * 4.227).toFixed(1) + "&nbsp&nbspcups</p>";
+    document.getElementById("Tbsp-output").innerHTML = "<p>" + (x * 4.227 * 16).toFixed(1) + "&nbspTbsp</p>";
+    document.getElementById("tsp-output").innerHTML = "<p>" + (x * 4.227 * 48).toFixed(1) + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
+
   } else if (y == "pint") {
-    document.getElementById("mL-output").innerHTML = "<p>" + (x * 473.1) + "&nbsp&nbspml</p>";
-    document.getElementById("oz-output").innerHTML = "<p>" + (x * 16) + "&nbsp&nbspfl. oz</p>";
-    document.getElementById("cup-output").innerHTML = "<p>" + (x * 2) + "&nbsp&nbspcups</p>";
-    document.getElementById("Tbsp-output").innerHTML = "<p>" + Math.round((x * 2 / 16) * 100) / 100 + "&nbsp&nbspTbsp</p>";
-    document.getElementById("tsp-output").innerHTML = "<p>" + Math.round((x * 2 / 48) * 100) / 100 + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
-    document.getElementById("liter-output").innerHTML = "<p>" + (x * 0.473) + "&nbsp&nbspL</p>";
-    document.getElementById("pint-output").innerHTML = "<p>" + (x * 1) + "  pt</p>";
+    document.getElementById("cup-output").innerHTML = "<p>" + (x * 2).toFixed(1) + "&nbsp&nbspcups</p>";
+    document.getElementById("Tbsp-output").innerHTML = "<p>" + (x * 2 * 16).toFixed(1) + "&nbspTbsp</p>";
+    document.getElementById("tsp-output").innerHTML = "<p>" + (x * 2 * 48).toFixed(1) + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
   }
 }
 
@@ -109,6 +93,11 @@ $increment = 360 / $loops;
 $half = Math.round($loops / 2);
 $barColor = '#ABA47B';
 $backColor = '#feeff4'; /*E6E6FA*/
+
+function play() {
+  var audio = new Audio('https://ahmeowcat.github.io/MM106Assignment15Final/audio/birdsong.mp3');
+  audio.play();
+}
 
 $(function () {
   clock.init();
@@ -175,6 +164,8 @@ clock = {
         $('.count').text(0);
         //$('.clock').removeAttr('class','clock pro-100');
         $('.clock').removeAttr('style');
+        console.log("Time is up!");
+        play();
       }
     }, 1000);
   },
@@ -193,7 +184,7 @@ $.getJSON({
   data: {
     jsoncallback: "processData",
     format: "json",
-    tags: "pastry"
+    tags: "Pastry"
   }
 })
 
@@ -207,18 +198,4 @@ const processData = function (data) {
     $("#photos").append($img);
     $img.wrap('<a href="' + $anchor + '">');
   }
-}
-
-/* play music */
-var aud = document.getElementById("playmusic").children[0];
-var isPlaying = false;
-aud.pause();
-
-function playPause() {
-  if (isPlaying) {
-    aud.pause();
-  } else {
-    aud.play();
-  }
-  isPlaying = !isPlaying;
 }

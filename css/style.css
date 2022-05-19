@@ -67,10 +67,6 @@ footer {
   background-color: var(--color-medium);
 }
 
-.music {
-  display: none;
-}
-
 .background1 {
   background: var(--color-bg-light) url("../images/catskitchen-screened.jpg") no-repeat center center;
   background-size: 100%;
@@ -96,14 +92,6 @@ footer {
   background-size: 100%;
 }
 
-.blank1 {
-  height: 220px;
-}
-
-.blank2 {
-  height: 50px;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -124,7 +112,7 @@ header h1 {
 
 #logo1 {
   height: 100px;
-  padding: 10px;
+  padding: 8px;
 }
 
 header h2, header a {
@@ -212,8 +200,16 @@ pre, #cooking, label {
   padding: 10px 10px;
 }
 
-#recipe, #list, #items_table  {
+#recipe, #list  {
   padding: 10px;
+}
+
+#items_table {
+  padding: 5px;
+}
+
+#items_table td {
+  padding: 2px 10px;
 }
 
 .button {
@@ -238,14 +234,20 @@ pre, #cooking, label {
   color: white;
 }
 
-.button:last-child {  /*give more room below last buttons */
- margin-bottom: 40px;
+.recipebuttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
 }
 
 .small {
   display: inline-block;
   width: 100px;
   margin: 10px 2px;
+}
+
+.last {
+  margin-bottom: 50px;
 }
 
 .box1 {
@@ -261,6 +263,18 @@ pre, #cooking, label {
 .box2 {
   /*hide the other units convert only cups & spoons */
   display: none;
+}
+
+.blank1 {
+  height: 240px;
+}
+
+.blank2 {
+  height: 220px;
+}
+
+.blank3 {
+  height: 100px;
 }
 
 /* Hamburger Menu source - https://codepen.io/erikterwan/pen/EVzeRP */
@@ -461,7 +475,7 @@ pre, #cooking, label {
 	padding:12px;
 	position:absolute;
 	border-radius:60px;
-	background-color:var(--color-timer);
+	background-color:var(--color-button);
 	text-transform:uppercase;
   letter-spacing: 2px;
   font-weight: 600;
