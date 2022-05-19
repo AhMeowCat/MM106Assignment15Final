@@ -92,10 +92,10 @@ $loops = Math.round(100 / $step);
 $increment = 360 / $loops;
 $half = Math.round($loops / 2);
 $barColor = '#ABA47B';
-$backColor = '#feeff4'; /*E6E6FA*/
+$backColor = '#f7d9e3'; /*E6E6FA or feeff4*/  
 
 function play() {
-  var audio = new Audio('https://ahmeowcat.github.io/MM106Assignment15Final/audio/birdsong.mp3');
+  var audio = document.getElementById("audio");
   audio.play();
 }
 
