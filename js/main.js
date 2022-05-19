@@ -92,11 +92,19 @@ $loops = Math.round(100 / $step);
 $increment = 360 / $loops;
 $half = Math.round($loops / 2);
 $barColor = '#ABA47B';
-$backColor = '#f7d9e3'; /*E6E6FA or feeff4*/  
+$backColor = '#f7d9e3'; /*E6E6FA or feeff4*/
 
 function play() {
   var audio = document.getElementById("audio");
   audio.play();
+  autoplay = true;
+}
+
+function play1() {
+  var audio = document.getElementById("audio");
+  audio.play();
+  audio.pause();
+  autoplay = true;
 }
 
 $(function () {
@@ -110,6 +118,7 @@ clock = {
         case 'start':
           clock.stop();
           clock.start($('.input-num').val());
+          play1();
           break;
         case 'stop':
           clock.stop();
