@@ -20,7 +20,8 @@
   --color-menu-toggle: #556B2F;
   --color-menu-hover: #ec366b; /*#740F35*/
   --color-border: #BAB86C;
-  --color-timer: #967BB6;
+  --color-timer-inner: #967BB6;
+  --color-timer-outer: #f7d9e3; /*#feeff4*/
 }
 
 body {
@@ -401,7 +402,7 @@ pre, #cooking, label {
 	margin-top:20px;
 	position:relative;
 	border-radius:50px;
-	background-color:#fff;
+	background-color:rgb(255,255,255,0.65);
 	box-shadow:0 0 15px rgba(0,0,0,.15);
 }
 .clock{
@@ -413,7 +414,7 @@ pre, #cooking, label {
 	position:absolute;
 	margin-top:-90px;
 	margin-left:-90px;
-	background-color:#feeff4;
+	background-color:var(--color-timer-outer);
 }
 .clock:before{
 	top:50%;
@@ -423,7 +424,7 @@ pre, #cooking, label {
 	margin-top:-60px;
 	margin-left:-60px;
 	border-radius:inherit;
-	background-color:var(--color-timer);
+	background-color:var(--color-timer-inner);
 	box-shadow:0 0 15px rgba(0,0,0,.15), 0 0 3px rgba(255,255,255,.75) inset;
 }
 .count{
@@ -464,6 +465,7 @@ pre, #cooking, label {
 	padding:12px;
 	border-radius:60px;
   margin: 10px -30px;
+  font-size: 1em;
   text-align: center;
 }
 
