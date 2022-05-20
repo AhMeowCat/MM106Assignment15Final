@@ -300,7 +300,6 @@ pre, #cooking, label {
   height: 100px; 
   margin: 3px; 
   padding: 0 3px;
-  border: 1px solid var(--color-bg-light);
 }
 
 /* Hamburger Menu source - https://codepen.io/erikterwan/pen/EVzeRP */
@@ -517,6 +516,20 @@ ul#menu .active li, ul#menu .active li:hover {   /* active page no hover */
   font-weight: 600;
   margin: 8px -50px;
   -webkit-appearance: none;
+}
+
+.round {  /*stop button */
+	width: 75px;
+  height: 75px;
+  border-radius:50%;
+  border: 5px solid var(--color-timer-inner);
+	background-color:var(--color-font-title);
+  font-weight: 600;
+  font-size: 0.9em;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 10px auto;  
 }
 
 .tbl{display:table;width:100%}
