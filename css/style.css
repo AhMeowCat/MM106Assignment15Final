@@ -70,22 +70,22 @@ footer {
 
 .background1 {
   background: var(--color-bg-light) url("../images/catskitchen-screened.jpg") no-repeat center center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .background2 {
   background: var(--color-bg-light) url("../images/catbiscuits-screened.jpg") no-repeat top center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .background3 {
   background: var(--color-bg-light) url("../images/catbaking-screened.jpg") no-repeat top center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .background4 {
   background: var(--color-bg-light) url("../images/catspicnic-screened.jpg") no-repeat top center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .background5 {
@@ -279,7 +279,7 @@ pre, #cooking, label {
 }
 
 .blank1 {
-  height: 240px;
+  height: 280px;
 }
 
 .blank2 {
