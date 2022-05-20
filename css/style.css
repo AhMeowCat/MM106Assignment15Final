@@ -175,6 +175,19 @@ textarea {
   width: 70px;
 }
 
+/* Hide arrows/spinners - https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+ Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 td,
 th {
   padding: 10px 10px 0 0;
@@ -222,11 +235,11 @@ pre, #cooking, label {
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 8px;
+  margin: 20px auto;
   background-color: var(--color-button);
   border-color: #var(--color-button);
   border-style: none;
   border-radius: 10px;
-  margin: 20px auto;
   color: white;
   -webkit-appearance: none;
 }
@@ -235,35 +248,34 @@ pre, #cooking, label {
   color: white;
 }
 
-.recipebuttons {
+.recipebuttons, #list p {
   display: flex;
-  justify-content: space-evenly;
-  padding: 0;
+  justify-content: start;
+  padding: 0 10px;
 }
 
 .small {
   display: inline-block;
   width: 100px;
-  margin: 10px 2px;
+  margin: 5px 5px;
+}
+
+#recipe input.button.small {
+  font-size: 0.9em;
 }
 
 .last {
   margin-bottom: 50px;
 }
 
-.box1 {
+.box {
   padding-right: 5px;
 }
 
-.box1 p {
+.box p {
   font-size: 1em;
   font-weight: 400;
   text-align: end;
-}
-
-.box2 {
-  /*hide the other units convert only cups & spoons */
-  display: none;
 }
 
 .blank1 {
@@ -276,6 +288,19 @@ pre, #cooking, label {
 
 .blank3 {
   height: 100px;
+}
+
+/* Flickr Gallery */
+
+#inspirations {
+  padding-left: 10px;
+}
+
+img {
+  max-height: 125px; 
+  margin: 3px; 
+  padding: 0 3px;
+  border: 1px solid var(--color-bg-light);
 }
 
 /* Hamburger Menu source - https://codepen.io/erikterwan/pen/EVzeRP */
@@ -301,12 +326,14 @@ pre, #cooking, label {
   color: var(--color-menu-hover);
   font-style: italic;
   font-weight: 600;
+  transform: scale(1.2);
 }
 
 ul#menu .active li, ul#menu .active li:hover {   /* active page no hover */
   color: var(--color-font-span);
   font-style: normal;
   font-weight: 800;
+  transform: none;
 }
 
 #menuToggle input {
@@ -494,13 +521,3 @@ ul#menu .active li, ul#menu .active li:hover {   /* active page no hover */
 
 .tbl{display:table;width:100%}
 .tbl .col{display:table-cell}
-
-/* Flickr Gallery */
-#photos {
-  padding: 15px;
-}
-
-img {
-  height: 100px;
-  padding: 2px;
-}

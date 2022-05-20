@@ -42,12 +42,13 @@ function saveItem() {
   showAll();
 }
 
+/*
 function modifyItem() {
   let name = document.forms.RecipeList.name.value;
   document.forms.RecipeList.data.value = localStorage.getItem(name);
   localStorage.getItem(name);
   showAll();
-}
+} */
 
 function deleteItem() {
   let name = document.forms.RecipeList.name.value;
@@ -95,12 +96,12 @@ $barColor = '#ABA47B';
 $backColor = '#f7d9e3'; /*E6E6FA or feeff4*/
 
 function play() {
-  var audio = document.getElementById("audio");
+  var audio = document.getElementById("audio"); //Audio file path is defined in HTML
   audio.play();
   autoplay = true;
 }
 
-function play1() {
+function play1() { //Initiate audio for click event to play on mobile devices
   var audio = document.getElementById("audio");
   audio.play();
   audio.pause();
@@ -118,7 +119,7 @@ clock = {
         case 'start':
           clock.stop();
           clock.start($('.input-num').val());
-          play1();
+          play1(); //Initiate audio for click event to play on mobile devices
           break;
         case 'stop':
           clock.stop();
@@ -174,7 +175,7 @@ clock = {
         //$('.clock').removeAttr('class','clock pro-100');
         $('.clock').removeAttr('style');
         console.log("Time is up!");
-        play();
+        play(); //Play audio when time is up
       }
     }, 1000);
   },
@@ -185,26 +186,29 @@ clock = {
   }
 }
 
-/* Flickr Gallery based on Isabel's example */
+/* Flickr Gallery source - https://idratherbewriting.com/learnapidoc/docapis_flickr_example.html */
 
-$.getJSON({
-  url: "https://api.flickr.com/services/feeds/photos_public.gne?",
-  dataType: "jsonp",
-  data: {
-    jsoncallback: "processData",
-    format: "json",
-    tags: "Pastry"
-  }
-})
-
-const processData = function (data) {
-  console.log(data);
-  $("#photos").html("");
-  for (var i = 0; i < data.items.length; i++) {
-    var $img = $("<img />");
-    var $anchor = data.items[i].link;
-    $img.attr("src", data.items[i].media.m);
-    $("#photos").append($img);
-    $img.wrap('<a href="' + $anchor + '">');
-  }
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=5c92085caa375ff76476d7c582f593b4&gallery_id=72157720707135606&format=json&nojsoncallback=1", //Endpoint with my API Key + Gallery ID requested on Flickr
+  "method": "GET",
+  "headers": {}
 }
+
+$.ajax(settings).done(function (data) {
+  console.log(data);
+
+  $.each(data.photos.photo, function (i, gp) {
+
+    var farmId = gp.farm;
+    var serverId = gp.server;
+    var id = gp.id;
+    var secret = gp.secret;
+
+    console.log(farmId + ", " + serverId + ", " + id + ", " + secret);
+
+    $("#flickr").append('<img src="https://farm' + farmId + '.staticflickr.com/' + serverId + '/' + id + '_' + secret + '.jpg"/>');
+
+  });
+});
