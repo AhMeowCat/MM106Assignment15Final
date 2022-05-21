@@ -244,6 +244,10 @@ pre, #cooking, label {
   -webkit-appearance: none;
 }
 
+.button:hover, .input-btn:hover {
+  transform: scale(1.05);
+}
+
 .button a {
   color: white;
 }
