@@ -205,18 +205,40 @@ $.ajax(settings).done(function (data) {
     var serverId = gp.server;
     var id = gp.id;
     var secret = gp.secret;
-    var description = gp.description
+    var description = gp.description;
+    var tags = gp.tags;
+    var title = gp.title;
     var ownername = gp.ownername;
-    var tags =  gp.tags;
-    var url_o = gp.url_o;
+    var tags = gp.tags;
+    var url_t = gp.url_t;
     var url_l = gp.url_l;
     var url_m = gp.url_m;
+    var url_z = gp.url_z;
 
     console.log(farmId + ", " + serverId + ", " + id + ", " + secret + ", " + ", " + description + ", " + ownername + ", " + tags + ", " + url_l);
 
-    //var $img = ('https://farm' + farmId + '.staticflickr.com/' + serverId + '/' + id + '_' + secret + '.jpg');       
+    var $a = $("<a href='#'></a>").append(
+      $("<img />")
+      .attr("src", url_t)
+      .attr("alt", title)
+      .attr("title", title)
+      .attr("data-image", url_z)
+      .attr("data-description", title)
+    );
+    $("#flickr").append($a);
+  });
 
-    $("#flickr").append('<a href="' + url_l + '"target="_blank"><img src="' + url_m + '"></a>');
+  // Gallery source - https://codepen.io/vanwars/pen/mrQLNj using jQuery from https://unitegallery.net/
+
+  $("#flickr").show();
+  $("#flickr").unitegallery({
+    tiles_type: "nested"
   });
 
 });
+
+/* old markup - not used
+  var $img = ('https://farm' + farmId + '.staticflickr.com/' + serverId + '/' + id + '_' + secret + '.jpg');       
+
+  $("#flickr").append('<a href="' + url_z + '"target="_blank"><img src="' + url_m + '"></a>');
+*/
