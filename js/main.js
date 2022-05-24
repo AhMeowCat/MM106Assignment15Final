@@ -191,7 +191,7 @@ clock = {
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=5c92085caa375ff76476d7c582f593b4&gallery_id=72157720707135606&format=json&nojsoncallback=1", //Endpoint with my API Key + Gallery ID requested on Flickr
+  "url": "https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=5c92085caa375ff76476d7c582f593b4&gallery_id=72157720707135606&get_user_info=1&get_gallery_info=1&extras=description%2C+owner_name%2C+tags%2C+path_alias%2C+url_sq%2C+url_t%2C+url_s%2C+url_q%2C+url_m%2C+url_n%2C+url_z%2C+url_c%2C+url_l%2C+url_o&format=json&nojsoncallback=1", //Endpoint with my API Key + Gallery ID requested on Flickr
   "method": "GET",
   "headers": {}
 }
@@ -205,10 +205,18 @@ $.ajax(settings).done(function (data) {
     var serverId = gp.server;
     var id = gp.id;
     var secret = gp.secret;
+    var description = gp.description
+    var ownername = gp.ownername;
+    var tags =  gp.tags;
+    var url_o = gp.url_o;
+    var url_l = gp.url_l;
+    var url_m = gp.url_m;
 
-    console.log(farmId + ", " + serverId + ", " + id + ", " + secret);
+    console.log(farmId + ", " + serverId + ", " + id + ", " + secret + ", " + ", " + description + ", " + ownername + ", " + tags + ", " + url_l);
 
-    $("#flickr").append('<img src="https://farm' + farmId + '.staticflickr.com/' + serverId + '/' + id + '_' + secret + '.jpg"/>');
+    //var $img = ('https://farm' + farmId + '.staticflickr.com/' + serverId + '/' + id + '_' + secret + '.jpg');       
 
+    $("#flickr").append('<a href="' + url_l + '"target="_blank"><img src="' + url_m + '"></a>');
   });
+
 });
