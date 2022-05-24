@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bake with Cups & Spoons: Inspirations</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body onload="checkBrowser()">
+
+  <div class="topbar">
+    <!--Hamburger Menu source - https://codepen.io/erikterwan/pen/EVzeRP-->
+    <nav role="navigation">
+      <div id="menuToggle">
+        <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+        <input type="checkbox" />
+
+        <!-- Some spans to act as a hamburger. -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="convert.html">
+            <li>Ingredient Converter</li>
+          </a>
+          <a href="recipe.html">
+            <li>Recipe Creator</li>
+          </a>
+          <a href="timer.html">
+            <li>Cooking Timer</li>
+          </a>
+          <a class="active" href="#">
+            <li>Inspirations</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <header>
+    <a href="index.html">Bake with Cups & Spoons<br><span>>>
+        Inspirations</span></a>
+    <img id="logo2" src="images/cups+spoons.png" alt="measuring cups & spoons">
+  </header>
+
+  <div class="background5">
+    <header>
+      <h3 id="main-title">Get Inspirations</h3>
+    </header>
+
+    <section id="inspirations">
+      <div style="clear:both;"></div>
+      <div id="flickr"></div>
+    </section>
+
+    <br>
+    <h2>Popup window examples</h2>
+    <a href="#"
+      onClick="MyWindow=window.open('http://www.google.com','MyWindow','width=600,height=300'); return false;">Click
+      Here</a>
+
+    <br>
+
+    <a href="http://kanishkkunal.com" target="popup"
+      onclick="window.open('http://kanishkkunal.com','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
+      Open Link in Popup
+    </a>
+
+    <footer>
+      <div class="bottombar1"></div>
+      <div class="bottombar2"></div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/main-test3.js"></script>
+
+</body>
+
+</html>
