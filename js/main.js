@@ -205,17 +205,21 @@ $.ajax(settings).done(function (data) {
     var serverId = gp.server;
     var id = gp.id;
     var secret = gp.secret;
-    var description = gp.description;
-    var tags = gp.tags;
-    var title = gp.title;
+  
     var ownername = gp.ownername;
+    var title = gp.title;
     var tags = gp.tags;
     var url_t = gp.url_t;
-    var url_l = gp.url_l;
-    var url_m = gp.url_m;
     var url_z = gp.url_z;
 
-    console.log(farmId + ", " + serverId + ", " + id + ", " + secret + ", " + ", " + description + ", " + ownername + ", " + tags + ", " + url_l);
+    //var description = gp.description;
+    //var url_m = gp.url_m;
+    //var url_l = gp.url_l;
+
+
+    console.log(farmId + ", " + serverId + ", " + id + ", " + secret + ", " + ", " + ownername + ", " + title + ", " + tags + ", " + url_t + ", " + url_z);
+
+    // Gallery source - https://codepen.io/vanwars/pen/mrQLNj using jQuery from https://unitegallery.net/
 
     var $a = $("<a href='#'></a>").append(
       $("<img />")
@@ -227,8 +231,6 @@ $.ajax(settings).done(function (data) {
     );
     $("#flickr").append($a);
   });
-
-  // Gallery source - https://codepen.io/vanwars/pen/mrQLNj using jQuery from https://unitegallery.net/
 
   $("#flickr").show();
   $("#flickr").unitegallery({
