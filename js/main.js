@@ -30,7 +30,18 @@ function aghuy() {
     document.getElementById("cup-output").innerHTML = "<p>" + (x * 2).toFixed(1) + "&nbsp&nbspcups</p>";
     document.getElementById("Tbsp-output").innerHTML = "<p>" + (x * 2 * 16).toFixed(1) + "&nbspTbsp</p>";
     document.getElementById("tsp-output").innerHTML = "<p>" + (x * 2 * 48).toFixed(1) + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
+
+  } else if (y == "gram Sugar") {
+    document.getElementById("cup-output").innerHTML = "<p>" + (x / 201).toFixed(1) + "&nbsp&nbspcups</p>";
+    document.getElementById("Tbsp-output").innerHTML = "<p>" + (x / 201 * 16).toFixed(1) + "&nbspTbsp</p>";
+    document.getElementById("tsp-output").innerHTML = "<p>" + (x / 201 * 48).toFixed(1) + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
+
+  } else if (y == "gram Flour") {
+    document.getElementById("cup-output").innerHTML = "<p>" + (x / 128).toFixed(1) + "&nbsp&nbspcups</p>";
+    document.getElementById("Tbsp-output").innerHTML = "<p>" + (x / 128 * 16).toFixed(1) + "&nbspTbsp</p>";
+    document.getElementById("tsp-output").innerHTML = "<p>" + (x / 128 * 48).toFixed(1) + "&nbsp&nbsp&nbsp&nbsp&nbsptsp</p>";
   }
+  
 }
 
 /* Recipe Creator based on Assignment 14 */
