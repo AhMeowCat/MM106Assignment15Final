@@ -280,6 +280,7 @@ pre, #cooking, label {
   font-size: 1em;
   font-weight: 400;
   text-align: end;
+  padding-left: 20px;
 }
 
 .blank1 {
